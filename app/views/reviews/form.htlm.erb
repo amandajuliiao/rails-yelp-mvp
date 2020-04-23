@@ -1,0 +1,10 @@
+<%= form_for [@restaurant, @review] do |f| %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.input :rating, collection: 1..5 %>
+  </div>
+  <% end %>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
