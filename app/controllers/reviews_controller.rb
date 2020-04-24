@@ -1,12 +1,16 @@
 class ReviewsController < ApplicationController
   before_action :find_restaurant
+
+  def show
+    @reviews.all
+  end
+
   def new
     @review = Review.new
   end
 
   def create
     @review = Review.new(review_params)
-    @review.restaurant = @restaurant
     @review.save
     redirect_to restaurant_path(@restaurant)
   end

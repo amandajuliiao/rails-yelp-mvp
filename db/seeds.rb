@@ -13,3 +13,4 @@ puts 'Creating restaurants'
     phone_number: Faker::PhoneNumber.phone_number,
     category: %w(chinese italian japanese french belgian).sample
   )
+end
